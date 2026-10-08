@@ -83,13 +83,13 @@ const T=[['Kedarkantha Trek','Easy–Moderate','4.9','Snow-laden pine forests an
 ['Nag Tibba Trek','Easy','4.7','The perfect weekend escape from Dehradun with big views.','2 Days','9,100 ft','₹3,500',0,6,'2026/06/Nag-Tibba-Trek.webp','treks/nag-tibba-trek/']];
 tg.innerHTML=T.map(t=>`<article class="card rvl"><div class="im">${art(0,t[7],t[8],U+t[9])}<span class="tag">${t[1]}</span><span class="rt">${t[2]}</span></div><div class="bd"><h3>${t[0]}</h3><p>${t[3]}</p><div class="mt"><span>${t[4]}</span><span>${t[5]}</span></div><div class="ft"><div><small>Starting from</small><b>${t[6]}</b></div><a class="lk" href="https://mountainiax.com/${t[10]}">View Trek →</a></div></div></article>`).join('');
 const E=[
-['Himalayan Treks','Summits, meadows and high passes.','https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=88',1],
-['Spiritual Yatras','Panch Kedar and Char Dham trails.','https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=88',1],
-['Offbeat Villages','Quiet valleys and warm homestays.','https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=88'],
-['Weekend Adventures','Short escapes from Dehradun.','https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=88'],
-['Camping Experiences','Stargazing under open skies.','https://images.unsplash.com/photo-1478827536114-da961b7b2d14?auto=format&fit=crop&w=1200&q=88'],
-['Custom Group Trips','Friends, family or office, planned your way.','https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=88',1],
-['Nepal Expeditions','Annapurna Base Camp and beyond.','https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=88',1]];
+['Himalayan Treks','Summits, meadows and high passes.','/assets/himalayan-experience.svg',1],
+['Spiritual Yatras','Panch Kedar and Char Dham trails.','/assets/himalayan-experience.svg',1],
+['Offbeat Villages','Quiet valleys and warm homestays.','/assets/himalayan-experience.svg'],
+['Weekend Adventures','Short escapes from Dehradun.','/assets/himalayan-experience.svg'],
+['Camping Experiences','Stargazing under open skies.','/assets/himalayan-experience.svg'],
+['Custom Group Trips','Friends, family or office, planned your way.','/assets/himalayan-experience.svg',1],
+['Nepal Expeditions','Annapurna Base Camp and beyond.','/assets/himalayan-experience.svg',1]];
 ex.innerHTML=E.map((e,i)=>`<a class="tl ${e[3]?'b':''} rvl" href="#contact"><div class="tlPhoto" style="background-image:url("${e[2]}")"></div><div><h3>${e[0]}</h3><p>${e[1]}</p></div></a>`).join('');
 const G=[[1,31,320,'Phulara Ridge','2024/05/2-2-1024x576.webp'],[2,32,430,'Trail to Dayara','2025/04/IMG_6815.webp'],[3,33,300,'Sunset camp','2025/03/PXL_20230607_044113015-1-1024x771.webp'],[4,34,390,'Valley of Flowers','2025/04/IMG20220628125130-1-01-1024x773.webp'],[0,35,340,'Golden hour','2025/04/PSX_20240622_202428.webp'],[5,36,420,'Under the stars','2023/06/IMG_8682-01-01-1024x861.webp'],[1,37,300,'Chandrashila snow','2023/06/IMG_20200604_214753-01-01-1024x682.webp']];
 ms.innerHTML=G.map(g=>`<figure class="m rvl" style="height:${g[2]}px">${art(0,g[0],g[1],U+g[4])}<figcaption>${g[3]}</figcaption></figure>`).join('');
