@@ -1,3 +1,4 @@
+// Cloudflare deployment trigger: latest experience artwork changes are ready.
 'use client';
 import { useEffect } from 'react';
 
