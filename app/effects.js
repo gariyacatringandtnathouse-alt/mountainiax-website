@@ -73,7 +73,7 @@ if(hero&&HERO_YT&&!HERO_VIDEO){const w=document.createElement('div');w.className
 f.onload=()=>{try{f.contentWindow.postMessage('{"event":"listening","id":1}','*')}catch(_){}};w.appendChild(f);el.appendChild(w);
 addEventListener('message',e=>{if(e.source!==f.contentWindow)return;try{const d=JSON.parse(e.data);if((d.event==='onStateChange'&&d.info===1)||(d.event==='infoDelivery'&&d.info&&d.info.playerState===1))w.classList.add('on')}catch(_){}})}}
 function art(h,pi,sd,img,hero){const d=document.createElement('div');d.className='art';if(img)d.dataset.img=img;mount(d,pi,sd,hero);return d.outerHTML}
-mount(heroart,0,4,true);mount(aboutart,2,7);mount(offart,3,11);mount(finalart,5,5);
+mount(heroart,0,4,true);mount(aboutart,2,7);mount(offart,3,11,'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=88');mount(finalart,5,5);
 // content
 const T=[['Kedarkantha Trek','Easy–Moderate','4.9','Snow-laden pine forests and a 360° summit view. The classic winter trek.','6 Days','12,500 ft','₹8,500',1,1,'2026/06/Kedarkantha-Trek.webp','treks/kedarkantha-trek/'],
 ['Chopta Tungnath Chandrashila','Easy–Moderate','4.9','The world’s highest Shiva temple, across alpine meadows.','5 Days','3,980 m','₹6,500',2,2,'2026/04/chopta-hero-CHV21JRL-1.jpg','treks/chopta-chandrashilla-tungnath/'],
@@ -82,16 +82,15 @@ const T=[['Kedarkantha Trek','Easy–Moderate','4.9','Snow-laden pine forests an
 ['Har Ki Dun Trek','Moderate','4.8','An ancient valley trail through remote Garhwali villages.','7 Days','11,700 ft','₹10,500',3,5,'2026/06/Har-Ki-Dun-Trek.webp','all-treks/'],
 ['Nag Tibba Trek','Easy','4.7','The perfect weekend escape from Dehradun with big views.','2 Days','9,100 ft','₹3,500',0,6,'2026/06/Nag-Tibba-Trek.webp','treks/nag-tibba-trek/']];
 tg.innerHTML=T.map(t=>`<article class="card rvl"><div class="im">${art(0,t[7],t[8],U+t[9])}<span class="tag">${t[1]}</span><span class="rt">${t[2]}</span></div><div class="bd"><h3>${t[0]}</h3><p>${t[3]}</p><div class="mt"><span>${t[4]}</span><span>${t[5]}</span></div><div class="ft"><div><small>Starting from</small><b>${t[6]}</b></div><a class="lk" href="https://mountainiax.com/${t[10]}">View Trek →</a></div></div></article>`).join('');
-const PX='https://images.weserv.nl/?url=';
 const E=[
-['Himalayan Treks','Summits, meadows and high passes.','https://mountainiax.com/wp-content/uploads/2024/05/2-2-1024x576.webp',1],
-['Spiritual Yatras','Panch Kedar and Char Dham trails.','https://mountainiax.com/wp-content/uploads/2025/12/kedarnath-temple-CWPVtdtP.jpg',1],
-['Offbeat Villages','Quiet valleys and warm homestays.','https://mountainiax.com/wp-content/uploads/2026/04/shangarh-valley-view.jpg'],
-['Weekend Adventures','Short escapes from Dehradun.','https://mountainiax.com/wp-content/uploads/2026/06/nag-tibba-1.webp'],
-['Camping Experiences','Stargazing under open skies.','https://mountainiax.com/wp-content/uploads/2025/03/PXL_20230607_044113015-1-1024x771.webp'],
-['Custom Group Trips','Friends, family or office, planned your way.','https://mountainiax.com/wp-content/uploads/2025/04/IMG_6815.webp',1],
-['Nepal Expeditions','Annapurna Base Camp and beyond.','https://mountainiax.com/wp-content/uploads/2026/05/annapurna-hero-CNNEFBn1.jpg',1]];
-ex.innerHTML=E.map((e,i)=>`<a class="tl ${e[3]?'b':''} rvl" href="#contact"><div class="tlPhoto" style="background-image:url("${PX+encodeURIComponent(e[2])}")"></div><div><h3>${e[0]}</h3><p>${e[1]}</p></div></a>`).join('');
+['Himalayan Treks','Summits, meadows and high passes.','https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=88',1],
+['Spiritual Yatras','Panch Kedar and Char Dham trails.','https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=88',1],
+['Offbeat Villages','Quiet valleys and warm homestays.','https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=88'],
+['Weekend Adventures','Short escapes from Dehradun.','https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=88'],
+['Camping Experiences','Stargazing under open skies.','https://images.unsplash.com/photo-1478827536114-da961b7b2d14?auto=format&fit=crop&w=1200&q=88'],
+['Custom Group Trips','Friends, family or office, planned your way.','https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=88',1],
+['Nepal Expeditions','Annapurna Base Camp and beyond.','https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=88',1]];
+ex.innerHTML=E.map((e,i)=>`<a class="tl ${e[3]?'b':''} rvl" href="#contact"><div class="tlPhoto" style="background-image:url("${e[2]}")"></div><div><h3>${e[0]}</h3><p>${e[1]}</p></div></a>`).join('');
 const G=[[1,31,320,'Phulara Ridge','2024/05/2-2-1024x576.webp'],[2,32,430,'Trail to Dayara','2025/04/IMG_6815.webp'],[3,33,300,'Sunset camp','2025/03/PXL_20230607_044113015-1-1024x771.webp'],[4,34,390,'Valley of Flowers','2025/04/IMG20220628125130-1-01-1024x773.webp'],[0,35,340,'Golden hour','2025/04/PSX_20240622_202428.webp'],[5,36,420,'Under the stars','2023/06/IMG_8682-01-01-1024x861.webp'],[1,37,300,'Chandrashila snow','2023/06/IMG_20200604_214753-01-01-1024x682.webp']];
 ms.innerHTML=G.map(g=>`<figure class="m rvl" style="height:${g[2]}px">${art(0,g[0],g[1],U+g[4])}<figcaption>${g[3]}</figcaption></figure>`).join('');
 const R=[['Ankita Srivastava','Dayara Bugyal Trek','My first trek turned out to be one of the best experiences of my life. Safe, comfortable and so well managed.'],['Bryn James','Dayara Bugyal Trek','Despite the monsoon rain, the guides and cooks kept us warm and fed. Beginner friendly and peaceful.'],['Rahul Gusain','Harsil Group Trip','A group of 10 from Dehradun to Harsil. Zero compromise on quality, routes, food or safety.'],['Ranjana Joshirao','Guided Yatra','We are senior citizens and our guides took care of all of us. An excellent yatra.']];
